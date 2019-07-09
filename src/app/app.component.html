@@ -1,0 +1,177 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">TodoEnNoticias.com</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ml-auto">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#deportes">Deportes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#entretenimiento">Entretenimiento</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#mundo">Mundo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#virales">Virales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#nacion">Nación</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#otro">otras noticias</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="masthead" id="page-top">
+  <div class="container">
+    <div class="intro-text">
+      <div class="intro-lead-in">Esté informado con nosotros!</div>
+      <div class="intro-heading">TodoEnNoticias.com</div>
+    </div>
+  </div>
+</header>
+
+<section class="bg-light page-section noticias" id="deportes">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">Deportes</h2>
+        <h3 class="section-subheading text-muted">Toda la actualidad deportiva está con nosotros.</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngFor="let deporte of deportes" class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="/assets/img/{{deporte.noticia.urlImg}}" alt="">
+          <h4>{{deporte.noticia.titulo}}</h4>
+          <p class="text-muted">{{deporte.noticia.desc}}</p>
+          <button type="button" class="btn btn-danger" (click)="openMoreInfo(deporte.noticia.urlNoticia)">Ver
+            más...</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-light page-section noticias" id="entretenimiento">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">Entretenimiento</h2>
+        <h3 class="section-subheading text-muted">Lo ultimo en farandula nacional e internacional mas cerca de tí.</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngFor="let item of entretenimiento" class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="/assets/img/{{item.noticia.urlImg}}" alt="">
+          <h4>{{item.noticia.titulo}}</h4>
+          <p class="text-muted">{{item.noticia.desc}}</p>
+          <button type="button" class="btn btn-danger">Ver más...</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light page-section noticias" id="mundo">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">Mundo</h2>
+        <h3 class="section-subheading text-muted">Todas las últimas noticias de los continentes en el Mundo. Encuentre
+          las principales noticias de Latinoamerica, Asia, Africa, Europa en el Mundo.</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngFor="let item of mundo" class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="/assets/img/{{item.noticia.urlImg}}" alt="">
+          <h4>{{item.noticia.titulo}}</h4>
+          <p class="text-muted">{{item.noticia.desc}}</p>
+          <button type="button" class="btn btn-danger">Ver más...</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-light page-section virales" id="virales">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">Virales</h2>
+        <h3 class="section-subheading text-muted">Las noticias mas virales de colombia y el mundo.</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngFor="let item of virales" class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="/assets/img/{{item.noticia.urlImg}}" alt="">
+          <h4>{{item.noticia.titulo}}</h4>
+          <p class="text-muted">{{item.noticia.desc}}</p>
+          <button type="button" class="btn btn-danger">Ver más...</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light page-section nacion" id="nacion">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">Nación</h2>
+        <h3 class="section-subheading text-muted">Las noticias mas virales de colombia y el mundo.</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngFor="let item of nacion" class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="/assets/img/{{item.noticia.urlImg}}" alt="">
+          <h4>{{item.noticia.titulo}}</h4>
+          <p class="text-muted">{{item.noticia.desc}}</p>
+          <button type="button" class="btn btn-danger">Ver más...</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light page-section otro" id="otro">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">Otras noticias</h2>
+        <h3 class="section-subheading text-muted">Las noticias mas virales de colombia y el mundo.</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngFor="let item of otro" class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="/assets/img/{{item.noticia.urlImg}}" alt="">
+          <h4>{{item.noticia.titulo}}</h4>
+          <p class="text-muted">{{item.noticia.desc}}</p>
+          <button type="button" class="btn btn-danger">Ver más...</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-dark text-light final">
+  <div class="footer-copyright text-center py-3">© 2019 Copyright: Angel Nicolas Mendez Parra
+  </div>
+</footer>
